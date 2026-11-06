@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#070910">
+  <title>NEON//RUN — Fugitive Protocol</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="shell">
+    <canvas id="game" aria-label="Neon Run survival game"></canvas>
+    <div class="scanlines"></div>
+    <header id="hud" class="hud hidden">
+      <div class="hud-left"><div class="brand">N<span>//</span>R <small>FUGITIVE PROTOCOL</small></div><div class="health-wrap"><span>VITALS</span><div class="meter"><i id="health-fill"></i></div><b id="health-text">100</b></div></div>
+      <div class="hud-center"><span class="wave-label">SECTOR <b id="wave">01</b></span><span class="enemy-count"><i class="dot"></i><b id="enemies">0</b> HOSTILES</span></div>
+      <div class="hud-right"><span>SCORE <b id="score">000000</b></span><span>¢ <b id="credits">0</b></span><button id="pause-btn" class="icon-btn" aria-label="Pause">Ⅱ</button></div>
+    </header>
+    <div id="combat-hint" class="combat-hint hidden"><span>WASD / STICK</span><i>MOVE</i><span>SPACE / ATTACK</span><i>STRIKE</i><span>SHIFT / Q</span><i>CYBER</i></div>
+    <div id="touch-controls" class="touch-controls hidden">
+      <div id="joystick" class="joystick"><div class="joy-ring"></div><div class="joy-knob"></div><span>MOVE</span></div>
+      <div class="touch-actions"><button id="touch-special" class="touch-btn special"><b>Q</b><span>CYBER</span><i></i></button><button id="touch-attack" class="touch-btn attack"><b>⚡</b><span>STRIKE</span></button></div>
+    </div>
+    <section id="screen" class="screen">
+      <div class="screen-content"></div>
+    </section>
+    <div id="toast" class="toast"></div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
